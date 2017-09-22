@@ -1,0 +1,8 @@
+deployment:
+  dockerhub:
+    branch: master
+    commands:
+      - curl -X POST -H 'Content-Type:application/json' --data '{"build":true}' "https://registry.hub.docker.com/u/srimant/demo-oracle/trigger/95c90704-850f-4a33-a1af-166b0da0b000/"	  
+test:
+  override:     
+    - mocha
